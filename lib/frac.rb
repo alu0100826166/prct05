@@ -28,6 +28,10 @@ class Fraccionario
 		numb = (d / f2.d) * f2.n
 		Fraccionario.new(numa - numb, d)
 	end
+	
+	def * (f2)
+		Fraccionario.new(@n * f2.n , @d * f2.d)
+	end
 		
 	
 end
