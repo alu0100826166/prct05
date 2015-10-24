@@ -5,11 +5,11 @@ class Fraccionario
 		@n = n
 		@d = d
 	end
-
-	def to_s
-		"#{n}/#{d}"
-	end
 	
+	def to_s
+	  "#@n/#@d"
+	end
+
 	def mcd(a, b)
     	b==0? a: mcd(b, a%b)
   	end
@@ -31,6 +31,10 @@ class Fraccionario
 	
 	def * (f2)
 		Fraccionario.new(@n * f2.n , @d * f2.d)
+	end
+	
+	def / (f2)
+		Fraccionario.new(@n * f2.d , @d * f2.n)
 	end
 		
 	
