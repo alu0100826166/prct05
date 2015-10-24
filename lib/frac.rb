@@ -16,10 +16,18 @@ class Fraccionario
 	
 	
 	def + (f2)
-		  d = (@d / mcd(@d, f2.d)) * f2.d
-		  numa = (d / @d) * @n
-		  numb = (d / f2.d) * f2.n
-		  Fraccionario.new(numa + numb, d)
+		d = (@d / mcd(@d, f2.d)) * f2.d
+		numa = (d / @d) * @n
+		numb = (d / f2.d) * f2.n
+		Fraccionario.new(numa + numb, d)
 	end
+	
+	def - (f2)
+		d = (@d / mcd(@d, f2.d)) * f2.d
+		numa = (d / @d) * @n
+		numb = (d / f2.d) * f2.n
+		Fraccionario.new(numa - numb, d)
+	end
+		
 	
 end

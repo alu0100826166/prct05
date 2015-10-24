@@ -11,5 +11,6 @@ class TestFrac < Test::Unit::TestCase
 		assert_equal("2/1", @origen.to_s)
 		assert_equal("1/2", @a.to_s)
 		assert_equal("5/2", (@a+@origen).to_s)
+		assert_equal("3/2", (@origen - @a).to_s)
 	end
 end
